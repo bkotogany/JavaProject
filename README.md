@@ -1,0 +1,2 @@
+# JavaProject
+GDE/Alkalmazasfejlesztesi technologia
