@@ -1,10 +1,7 @@
-# JavaProject
-GDE/Alkalmazasfejlesztes technologia
-
 # Verseny Eredményhirdető Rendszer
 
 ## Leírás
-Ez a konzolos Java alkalmazás lehetővé teszi sportversenyek adatainak kezelését. A program MySQL adatbázist használ, amely három táblából áll: versenyzok, versenyek, és eredmenyek.
+Ez a konzolos Java alkalmazás lehetővé teszi sportversenyek adatainak kezelését. A program MySQL adatbázist használ, amely három táblából áll: versenyzok, versenyek és eredmenyek.
 
 ## Funkciók
 - Versenyzők rögzítése (név, ország)
@@ -12,24 +9,27 @@ Ez a konzolos Java alkalmazás lehetővé teszi sportversenyek adatainak kezelé
 - Eredmények rögzítése (versenyző, verseny, pontszám, helyezés)
 - Eredmények listázása helyezés szerint
 
+## Adatbázis telepítése
+1. Nyisd meg a MySQL szervert.
+2. Importáld a `database.sql` fájlt:
+   - Terminálból: `mysql -u root -p < database.sql`
+   - Vagy MySQL Workbench segítségével importáld
+3. Az adatbázis neve: `verseny_db`
+
 ## Használat
-1. Győződj meg róla, hogy a MySQL szerver fut.
-2. Importáld a `verseny_db` adatbázist az `SQL fájl` alapján.
-3. Indítsd el a programot: `Main.java`
-4. Kövesd a konzolos menüt.
+1. Állítsd be a `.env` fájlt a megfelelő adatbázis adatokkal.
+2. Futtasd a `Main.java` programot.
+3. Kövesd a konzolos menüt.
 
 ## Adatbázis kapcsolat
-A `Database.java` osztályban található:
-
-jdbc:mysql://localhost:3306/verseny_db
-
-Felhasználónév: `root`  
-Jelszó: (állítsd be szükség szerint)
+A `Database.java` osztály a `.env` fájlból olvassa az adatokat
 
 ## Követelmények
 - Java 17+
-- MySQL
-- JDBC Driver: `mysql-connector-j` (v8.0+)
+- MySQL szerver
+- Maven (projektfüggőségek kezelése)
+- JDBC Driver: mysql-connector-j
+- dotenv-java könyvtár
 
 ## Szerző
 Készítette: Kotogány Bettina
