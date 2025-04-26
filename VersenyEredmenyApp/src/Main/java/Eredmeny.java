@@ -1,3 +1,4 @@
+package Main.java;
 public class Eredmeny 
 {
     public int id;

@@ -1,3 +1,4 @@
+package Main.java;
 public class Verseny 
 {
     public int id;
